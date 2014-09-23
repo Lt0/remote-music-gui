@@ -1,0 +1,25 @@
+#!/bin/sh
+
+echo install client
+sudo cp -f ./gtk_client /usr/bin
+sudo cp -rf ./ui_images /usr/bin
+sudo chmod 111 /usr/bin/gtk_client
+if [ -d /usr/share/raspi_remote_control ]
+	then
+ 		echo "/usr/share/raspi_remote_control is exist"
+	else
+		mkdir /usr/share/raspi_remote_control
+fi
+sudo cp -rf ./ui_images/ /usr/share/raspi_remote_control/
+sudo chmod 777 /usr/share/raspi_remote_control/
+sudo chmod 777 /usr/share/raspi_remote_control/*
+mkdir /etc/raspi_remote_control
+cp ./config/config_music.txt ./安装和配置说明.txt /etc/raspi_remote_control
+sudo chmod -R 777 /etc/raspi_remote_control/*
+
+echo installing server
+sudo cp -f ./raspi_server /sbin/
+sudo chmod 111 /sbin/raspi_server 
+mkdir /etc/raspi_server
+cp ./config/config_raspi_server.txt ./安装和配置说明.txt /etc/raspi_server/
+sudo chmod -R 777 /etc/raspi_server

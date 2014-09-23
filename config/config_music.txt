@@ -1,0 +1,4 @@
+LYRIC_SAVE_PATH: /media/nfs-toshiba/remote/gtk_client/music/lyrics/
+#MUSIC_SERVER_IP: 192.168.10.1
+MUSIC_SERVER_IP: 127.0.0.1
+SOCKET_PORT: 7999

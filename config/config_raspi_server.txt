@@ -1,0 +1,30 @@
+SOCKET_PORT: 7999
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/mTOP/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/song/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/33/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/129/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/分手假期/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/进退维谷/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/洛丽塔/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/实习不下乡/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/手机音乐/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/我的歌声里/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/新建文件夹/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Broken Angel/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/classic/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/FIL/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/French Music/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music01/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music02/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music03/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music04/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/samba/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/The Mass/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Within Temptation/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/绝响/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/老歌/
+MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/蔡淳佳/
+PLAY_PATH: 3
+PLAY_MODE: PLAY_LIST
+PLAY_ITER: 0

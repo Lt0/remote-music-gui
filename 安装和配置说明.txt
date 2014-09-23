@@ -1,0 +1,53 @@
+安装：
+若只在本地使用，用超级权限执行gtk_client下的install，然后按照配置说明进行设置，设置完即可执行gtk_client运行。
+如果要用一台机器控制另外一台机器，则在控制端用超级权限执行gtk_client下的install之后并配置之后，再去被控制端用超级权限执行raspi_server下的install文件，并执行raspi_server -s(此命令会打开一个服务器daemon进程)
+之后要使用的时候在控制端执行gtk_client即可。
+
+配置：
+  客户端：
+    配置文件：/etc/raspi_remote_control/config_music.txt
+    示例：
+      LYRIC_SAVE_PATH: /media/nfs-toshiba/remote/gtk_client/music/lyrics/
+      #MUSIC_SERVER_IP: 192.168.10.1
+      MUSIC_SERVER_IP: 127.0.0.1
+      SOCKET_PORT: 7999
+      
+      说明：客户端接受以下选项：
+      LYRIC_SAVE_PATH: 歌词路径，客户端会在次路径下查找和当前播放的音乐同名的lrc歌词文件，找到则显示，设置错误将导致歌词无法正常显示
+      MUSIC_SERVER_IP: 服务器IP地址，如果是在本地则设置为127.0.0.1或localhost，如果是连接到远程，则设置为远程ip，设置错误将导致软件无法正常使用
+      SOCKET_PORT这: 连接端口，如果不清楚作用请保持默认的7999，设置错误将导致软件无法正常使用
+      所有选项均大小写敏感，每个选项和选项值通过空格或英文冒号分开，每一行一个选项，非可选选项会被自动忽略，但写入配置时会被删除。
+      
+    服务器端：
+      配置文件：/etc/raspi_server/raspi_server_config.txt
+      示例：
+	SOCKET_PORT: 7999
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/mTOP/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/33/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/129/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Broken Angel/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/classic/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/FIL/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/French Music/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music01/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music02/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music03/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Music04/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/samba/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/The Mass/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/Within Temptation/
+	MUSIC_PATH: /media/nfs-toshiba/backup_PC/MUSIC/蔡淳佳/
+	PLAY_PATH: 3
+	PLAY_MODE: PLAY_LIST
+	PLAY_ITER: 0
+	
+	说明：服务器端接受以下选项：
+	SOCKET_PORT: 监听端口，不清楚的话请保持默认数值：7999，设置错误将导致客户端无法连接
+	MUSIC_PATH: 音乐文件夹，服务器端会扫描该选项值下的路径，并在需要的时候向客户端发送该目录下所有mp3文件路径，可以设置多个路径。
+	PLAY_PATH: 用户当前使用的播放路径，错误设置将可能导致崩溃，请勿手动设置
+	PLAY_MODE：用户当前选择的播放模式，可选项：SHUFFLE， LOOP_ONE, LOOP_LIST, PLAY_ONE，错误设置将被忽略
+	PLAY_ITER: 用户当前播放位置——该功能暂未开发，设置错误将可能导致崩溃，请留空
+	
+	所有选项均大小写敏感，每个选项和选项值通过空格或英文冒号分开，每一行一个选项，非可选选项会被自动忽略，但写入配置时会被删除。
+	
