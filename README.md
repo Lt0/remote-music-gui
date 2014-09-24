@@ -1,19 +1,9 @@
 remote-music-gui
 ================
 
-  It's a remote control application which used to control the music played in raspberry by PC(linux).
-  It include the music list(auto create by music folders in raspberry), 
-basic control (stop, pause, play, next, pre, progress bar, volume adjustment), show music info and lyric show.
-  It was written by C and GTK, compiled by gnu toolchain in linux.
-  I just run it in ubuntu, cent os and openSUSE but it should be easy to compile in windows and run.
+一个通过PC远程控制树莓派上的音乐播放器moc的GUI，另外也可以控制本地的moc播放器，默认未配置树莓派IP的时候控制本地moc播放器。
+包含播放，暂停，停止，上一首，下一首，播放模式切换，音量调节（由于树莓派上moc的音量控制失效故而该功能仅对本地控制时有效），进度条显示和播放进度拖放，播放列表，音乐文件信息显示和歌词显示等功能。
 
-  Before compile you should make should you have installed the cmake, gnu toolchain and gtk develop toolkit in you system.
-  Compiling the server:
-	After download all code files, cd to the code file's folder and run the command: make server.
-
-  Compiling the client:
-	CD to the code file's folder and run command: make client
-
-
-  How to use:
-	Just see the install_and_config file.
+编译：
+1.通过PC远程控制树莓派：
+  首先在电脑和树莓派上安装cmake和gnu toochain，
